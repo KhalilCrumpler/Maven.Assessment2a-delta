@@ -1,5 +1,6 @@
 package rocks.zipcode.assessment2.collections;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ public class Inventory {
      */
     private Map<String, Integer> myMap;
     public Inventory(List<String> strings) {
+        this.myMap = new HashMap<>();
         Integer number = 1;
         for(String a : strings){
             if(this.myMap.containsKey(a)){
