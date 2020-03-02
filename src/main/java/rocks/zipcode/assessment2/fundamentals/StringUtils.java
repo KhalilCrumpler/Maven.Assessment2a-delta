@@ -10,7 +10,12 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by left-padding
      */
     public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        return null;
+        String newString = "";
+        for(int i = 0; i < amountOfPadding; i++){
+            newString += " ";
+        }
+        newString += stringToBePadded;
+        return newString;
     }
 
     /**
@@ -28,7 +33,11 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        return null;
+        String newString = "";
+        for(int i = 0; i < numberOfTimeToRepeat; i++){
+            newString += stringToBeRepeated;
+        }
+        return newString;
     }
 
     /**
@@ -36,7 +45,13 @@ public class StringUtils {
      * @return - true if string only contains alpha characters
      */
     public static Boolean isAlphaString(String string) {
-        return null;
+        char[] chars = string.toCharArray();
+        for(char c : chars){
+            if(!Character.isLetter(c)){
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -44,7 +59,7 @@ public class StringUtils {
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        return null;
+        return isAlphaString(string);
     }
 
     /**

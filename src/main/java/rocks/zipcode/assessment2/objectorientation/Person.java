@@ -10,35 +10,48 @@ public class Person {
      * @param name - name of person
      * @param address - address of person
      */
+    private Long id = Long.MIN_VALUE;;
+    private String name;
+    private Address address;
     public Person(Long id, String name, Address address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
     }
 
     public Person() {
+        this.id = id;
+        this.name = "";
     }
 
     public Long getId() {
-        return null;
+        return this.id;
     }
 
     public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
-        return null;
+
+        return this.name;
     }
 
     public void setName(String name) {
+        this.name = name;
     }
 
     public Address getAddress() {
-        return null;
+
+        return this.address;
     }
 
     public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
     public boolean equals(Object o) {
-        return (Boolean)null;
+        return this == o;
     }
 }
