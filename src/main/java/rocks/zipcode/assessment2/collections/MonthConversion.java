@@ -13,7 +13,6 @@ public class MonthConversion {
      * @param monthName - name of month
      */
     HashMap<Integer, String> myMap = new HashMap<>();
-    HashMap<Integer, String> newMap = new HashMap<>();
 
     public void add(Integer monthNumber, String monthName) {
         this.myMap.put(monthNumber, monthName);

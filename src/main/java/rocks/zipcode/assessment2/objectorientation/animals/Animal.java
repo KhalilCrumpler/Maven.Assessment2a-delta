@@ -11,6 +11,8 @@ public class Animal {
     private Long id;
     private Person owner;
     public Animal() {
+        this.id = null;
+        this.owner = new Person();
     }
 
     /**
