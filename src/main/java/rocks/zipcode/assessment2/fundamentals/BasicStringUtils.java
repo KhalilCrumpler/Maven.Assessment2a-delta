@@ -43,7 +43,18 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+        String newString = "";
+        String[] stringArray = string.split("");
+        String[] removeArray = charactersToRemove.split("");
+        for(int i = 0; i < stringArray.length; i++){
+            for(int j = 0; j < removeArray.length; j++){
+                if(!stringArray[i].equals(removeArray[j])){
+                    newString += stringArray[i];
+                    break;
+                }
+            }
+        }
+        return newString;
     }
 
     /**
