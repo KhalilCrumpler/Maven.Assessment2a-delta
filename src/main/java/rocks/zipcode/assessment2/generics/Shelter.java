@@ -17,14 +17,16 @@ public class Shelter<_> {
      * @return the number of item in the shelter
      */
     public int size() {
-        return -1;
+
+        return this.size();
     }
 
     public void add(Object object) {
     }
 
     public Boolean contains(Object object) {
-        return null;
+
+        return this.contains(object);
     }
 
     public void remove(Object object) {
