@@ -10,7 +10,7 @@ public class Person {
      * @param name - name of person
      * @param address - address of person
      */
-    private Long id = Long.MIN_VALUE;;
+    private Long id;
     private String name;
     private Address address;
     public Person(Long id, String name, Address address) {
@@ -20,11 +20,13 @@ public class Person {
     }
 
     public Person() {
-        this.id = id;
+        this.id = Long.MIN_VALUE;
         this.name = "";
+        this.address = new Address();
     }
 
     public Long getId() {
+
         return this.id;
     }
 
@@ -42,11 +44,11 @@ public class Person {
     }
 
     public Address getAddress() {
-
         return this.address;
     }
 
     public void setAddress(Address address) {
+
         this.address = address;
     }
 

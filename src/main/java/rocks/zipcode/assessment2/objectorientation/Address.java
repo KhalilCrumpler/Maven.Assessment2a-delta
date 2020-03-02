@@ -1,5 +1,9 @@
 package rocks.zipcode.assessment2.objectorientation;
 
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
+
+import java.lang.reflect.Field;
+
 /**
  * @author leon on 28/11/2018.
  */
@@ -10,6 +14,11 @@ public class Address {
     private String state;
     private String zipcode;
     public Address() {
+        this.addressLine1 = "";
+        this.addressLine2 = "";
+        this.city = "";
+        this.state = "";
+        this.zipcode = "";
     }
 
     /**
@@ -19,7 +28,7 @@ public class Address {
      * @param state - state of city
      * @param zipcode - zipcode of region
      */
-    
+
     public Address(String addressLine1, String addressLine2, String city, String state, String zipcode) {
         this.addressLine1 = addressLine1;
         this.addressLine2= addressLine2;
@@ -75,7 +84,6 @@ public class Address {
 
     @Override
     public boolean equals(Object o) {
-
         return false;
     }
 }

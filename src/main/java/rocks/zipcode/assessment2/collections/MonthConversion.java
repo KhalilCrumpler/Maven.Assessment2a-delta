@@ -1,5 +1,9 @@
 package rocks.zipcode.assessment2.collections;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Use a map to solve
  */
@@ -8,7 +12,11 @@ public class MonthConversion {
      * @param monthNumber - ordinal of month in the year; i.e. January = 1, February = 2
      * @param monthName - name of month
      */
+    HashMap<Integer, String> myMap = new HashMap<>();
+    HashMap<Integer, String> newMap = new HashMap<>();
+
     public void add(Integer monthNumber, String monthName) {
+        this.myMap.put(monthNumber, monthName);
 
     }
 
@@ -17,7 +25,15 @@ public class MonthConversion {
      * @return the name of the respective month
      */
     public String getName(Integer monthNumber) {
-        throw new NullPointerException();
+        String[] newArray = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        Integer count = 1;
+        for (String a : newArray) {
+            this.myMap.put(count, a);
+            count += 1;
+        }
+
+        return this.myMap.get(monthNumber);
+
     }
 
     /**
@@ -33,7 +49,13 @@ public class MonthConversion {
      * @return true if the monthNumber is in the keySet
      */
     public Boolean isValidNumber(Integer monthNumber) {
-        return null;
+        String[] newArray = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        Integer count = 1;
+        for (String a : newArray) {
+            this.myMap.put(count, a);
+            count += 1;
+        }
+        return this.myMap.containsKey(monthNumber);
     }
 
     /**
@@ -41,14 +63,21 @@ public class MonthConversion {
      * @return true if the monthName is in the valueSet
      */
     public Boolean isValidMonth(String monthName) {
-        return null;
+        String[] newArray = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        Integer count = 1;
+        for (String a : newArray) {
+            this.myMap.put(count, a);
+            count += 1;
+        }
+        return this.myMap.containsValue(monthName);
     }
 
     /**
      * @return number of entries in this mapping
      */
     public Integer size() {
-        return -1;
+
+        return this.myMap.size();
     }
 
     /**
@@ -56,6 +85,14 @@ public class MonthConversion {
      * @param monthName - name of month
      */
     public void update(Integer monthNumber, String monthName) {
-
+        String[] newArray = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        Integer count = 1;
+        for (String a : newArray) {
+            this.myMap.put(count, a);
+            count += 1;
+        }
+        if(newArray[monthNumber-1] == monthName){
+            this.myMap.put(monthNumber, monthName);
+        }
     }
 }
