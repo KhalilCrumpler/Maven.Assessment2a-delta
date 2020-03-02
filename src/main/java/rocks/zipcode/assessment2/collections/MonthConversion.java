@@ -41,6 +41,18 @@ public class MonthConversion {
      * @return - the ordinal of the month in the year
      */
     public int getNumber(String monthName) {
+        String[] newArray = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        Integer count = 1;
+        for (String a : newArray) {
+            this.myMap.put(count, a);
+            count += 1;
+        }
+        for(Integer a : this.myMap.keySet()){
+            if(this.myMap.get(a).equals(monthName)){
+                return a;
+            }
+        }
+
         return (Integer)null;
     }
 
