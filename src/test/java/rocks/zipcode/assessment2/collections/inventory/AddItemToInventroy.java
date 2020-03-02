@@ -6,7 +6,7 @@ import rocks.zipcode.assessment2.collections.Inventory;
 
 import java.util.Arrays;
 
-public class AddItemToInventroy {
+public class  AddItemToInventroy {
 
     @Test
     public void test0() {
